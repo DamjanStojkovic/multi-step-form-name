@@ -100,6 +100,7 @@ body {
   flex-grow: 1;
   margin-left: 5rem;
   margin-right: 5rem;
+  width: 50%;
 }
 
 .stp .header {
@@ -192,7 +193,6 @@ body {
 
 .step-2 {
   display: none;
-  width: 50%;
 }
 
 .step-2 form {
