@@ -523,6 +523,7 @@ input:checked + .slider::before {
     top: 12%;
     max-width: 400px;
     background-color: white;
+    width: 90%;
   }
 
   .btn {
