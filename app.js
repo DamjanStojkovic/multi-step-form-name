@@ -12,7 +12,7 @@ let time;
 let currentStep = 1;
 let currentCircle = 0;
 const obj = {
-  plan: document.querySelector("b"),
+  plan: document.querySelector(".type"),
   kind: null,
   price: document.querySelector(".price"),
 };

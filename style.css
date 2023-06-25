@@ -360,7 +360,7 @@ input:checked + .slider::before {
 }
 
 .price-add {
-  margin-left: 0;
+  margin-left: auto;
   color: hsl(243, 100%, 62%);
   font-weight: 500;
 }
@@ -480,9 +480,8 @@ input:checked + .slider::before {
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin: auto;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin: auto 3rem auto 3rem;
+  width: 50%;
 }
 
 .step-5 p {
