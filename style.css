@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(217, 100%, 97%);
+}
+
+.form {
+  width: 58rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.form-sidebar {
+  background-image: url(assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  width: 274px;
+  height: 568px;
+  padding: 2.5rem 2rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+}
+
+.active .circle {
+  background-color: hsl(206, 94%, 87%) !important;
+  color: hsl(213, 96%, 18%) !important;
+  border: none;
+}
+
+.err {
+  border: 2px solid hsl(354, 84%, 57%) !important;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.content span {
+  color: hsl(229, 24%, 87%);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.content b {
+  text-transform: uppercase;
+  color: white;
+}
+
+.stp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.stp .header {
+  margin-bottom: auto;
+  padding-top: 2.5rem;
+
+  line-height: 2rem;
+}
+
+.stp .header .title {
+  color: hsl(213, 96%, 18%);
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+.stp .header p {
+  color: hsl(231, 11%, 63%);
+}
+
+.next-step {
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+  outline: none;
+  border: none;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  padding: 0.9rem 1.6rem;
+  border-radius: 0.5rem;
+  float: right;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* Step 1 */
+
+.step-1 {
+  display: flex;
+  margin-left: 96px;
+}
+
+.step-1 form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.step-1 form .label {
+  display: flex;
+  color: hsl(213, 96%, 18%);
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.step-1 form .label p {
+  color: hsl(354, 84%, 57%);
+  font-weight: 700;
+}
+
+.step-1 form input {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(229, 24%, 87%);
+  width: 100%;
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+.step-1 form input:focus {
+  outline: 1px solid hsl(213, 96%, 10%);
+}
+
+.step-1 form input::placeholder {
+  color: hsl(231, 11%, 63%);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form .error {
+  display: none;
+  color: hsl(354, 84%, 57%);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Step 2 */
+
+.step-2 {
+  display: none;
+}
+
+.step-2 form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 170px;
+}
+
+.plan {
+  border: 2px solid hsl(229, 24%, 87%);
+  border-radius: 8px;
+  width: 150px;
+  height: 170px;
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.plan:hover {
+  border: 1px solid hsl(243, 100%, 62%);
+  cursor: pointer;
+}
+
+.selected {
+  border: 1px solid hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
+}
+
+.plan-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-info b {
+  color: hsl(213, 96%, 18%);
+}
+
+.plan-info span {
+  color: hsl(231, 11%, 63%);
+}
+
+.monthly,
+.yearly {
+  color: hsl(231, 11%, 63%);
+  font-weight: 500;
+}
+
+.sw-active {
+  color: hsl(213, 96%, 18%);
+}
+
+.free {
+  display: none;
+  color: hsl(213, 96%, 18%);
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prev-step {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  padding: 0.9rem 1.6rem;
+  color: hsl(231, 11%, 63%);
+  cursor: pointer;
+}
+
+.switcher {
+  background-color: hsl(217, 100%, 97%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  border-radius: 0.8rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+/* The slider */
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Step 3 */
+
+.step-3 {
+  display: none;
+}
+
+.step-3 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: auto;
+}
+
+.box {
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 7px;
+  padding: 1.2rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.descript {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-left: 1.5rem;
+}
+
+.price-add {
+  margin-left: 0;
+  color: hsl(243, 100%, 62%);
+  font-weight: 500;
+}
+
+.ad-selected {
+  border: 1px solid hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
+}
+
+.step-3 .box input {
+  accent-color: hsl(243, 100%, 62%);
+  transform: scale(1.5);
+  user-select: none;
+  margin-left: 8px;
+}
+
+.descript label {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+  user-select: none;
+}
+
+.descript small {
+  color: hsl(231, 11%, 63%);
+  font-weight: 500;
+}
+
+/* Step 4 */
+
+.step-4 {
+  display: none;
+}
+
+.step-4 .header {
+  margin-bottom: 2rem;
+}
+
+.cheking-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: auto;
+}
+
+.selection-container {
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 8px;
+  padding: 0rem 1.5rem 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.selected-plan {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+
+.selected-plan div {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.selected-plan .plan-price {
+  display: flex;
+  align-items: center;
+}
+
+.selected-plan button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: hsl(231, 11%, 63%);
+  text-decoration: underline;
+}
+
+.selected-plan button:hover {
+  color: hsl(243, 100%, 62%);
+}
+
+.selected-addon {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: hsl(231, 11%, 63%);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.selected-addon .servic-price {
+  color: hsl(213, 96%, 18%);
+}
+
+.total {
+  color: hsl(231, 11%, 63%);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total b {
+  color: hsl(243, 100%, 62%);
+}
+
+#last:hover {
+  background-color: hsl(243, 100%, 62%, 0.75);
+}
+
+/* Step 5 */
+
+.step-5 {
+  display: none;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.step-5 p {
+  color: hsl(231, 11%, 63%);
+  line-height: 1.5;
+  padding-top: 1rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    position: relative;
+  }
+
+  .form-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url(./assets/images/bg-sidebar-mobile.svg);
+    flex-direction: row;
+    height: 300px;
+    background-size: cover;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: -2;
+    border-radius: 0;
+  }
+
+  .content {
+    display: none;
+  }
+
+  .form {
+    position: absolute;
+    top: 12%;
+    max-width: 400px;
+    background-color: white;
+  }
+
+  .btn {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    right: 0;
+    left: 0;
+    height: 100px;
+    padding-inline: 1rem;
+  }
+
+  .step-1 {
+    margin: auto auto 1rem auto;
+  }
+
+  .stp .header {
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  .stp .header p {
+    font-weight: 500;
+  }
+
+  .step-1 .btn {
+    margin: auto 0 auto auto;
+  }
+
+  .step-2 {
+    margin: auto auto 1rem auto;
+    padding: 1rem;
+    height: 500px;
+  }
+
+  .step-2 form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .plan {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .switcher {
+    margin-top: 8.5rem;
+    margin-bottom: 0;
+  }
+  .step-1 .btn button {
+    margin: auto 0 auto auto;
+  }
+
+  .step-2 .btn button {
+    margin: auto 0 auto 0;
+  }
+
+  .step-3 {
+    margin: auto auto 1rem auto;
+    padding: 1rem;
+  }
+
+  .step-3 .descript {
+    margin-left: 0.7rem;
+  }
+
+  .step-3 .box {
+    padding: 0.8rem;
+  }
+
+  .step-3 .price-add {
+    margin-left: auto;
+  }
+
+  .step-3 input {
+    margin-right: 0.4rem;
+  }
+
+  .step-3 .btn button {
+    margin: auto 0 auto 0;
+  }
+
+  .step-4 {
+    margin: auto auto 1rem auto;
+    padding: 1rem;
+  }
+
+  .step-4 .btn button {
+    margin: auto 0 auto 0;
+  }
+
+  .step-5 {
+    margin: auto;
+    padding: 3rem 1rem 3rem 1rem;
+  }
+}
